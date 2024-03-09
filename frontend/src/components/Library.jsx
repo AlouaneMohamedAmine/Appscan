@@ -20,7 +20,7 @@ const Library = () => {
     };
 
     return (
-        <div className="flex flex-col w-full   rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 ">
+        <div className="flex flex-col w-full   rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 mt-20">
             <h1 className="text-2xl font-semibold  text-white mb-1">Library</h1>
             <p className='text-white'>You can save a list of manga titles here.</p>
             <ul>
