@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <div>
       {isOpen && <div className="fixed inset-0 bg-black opacity-50 z-20" onClick={() => setIsOpen(false)}></div>}
-      <nav className={`fixed w-full bg-gray-800 p-2 mt-0 ${isOpen ? 'z-30' : ''}`}>
+      <nav className={`relative w-full bg-gray-800 p-2 mt-0 ${isOpen ? 'z-30' : ''}`}>
         <div className="container mx-auto flex flex-wrap items-center">
           <div className="flex w-full md:w-1/2 justify-between text-white font-extrabold">
             <a className="text-white no-underline hover:text-white hover:no-underline" href="#">

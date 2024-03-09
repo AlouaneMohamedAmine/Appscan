@@ -26,7 +26,7 @@ const allRoutes = [
       { path: "/register", component: <RegisterPage />},
     ];
 
-function Routing() {
+function Router() {
   return (
       <BrowserRouter>
       <Routes>
@@ -38,4 +38,4 @@ function Routing() {
   );
 }
 
-export default Routing ;
+export default Router ;

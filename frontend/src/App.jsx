@@ -1,12 +1,11 @@
-import { BrowserRouter as Router } from "react-router-dom";
-//import { CurrentUserContextProvider } from "./contexts/userContext";
-import Routing from "./components/Routing";
+import { CurrentUserContextProvider } from "./contexts/userContext";
+import Router from "./components/Router";
 
 export default function App() {
  
   return (
-    <Router>
-       <Routing  />
-       </Router>
+    <CurrentUserContextProvider>
+       <Router />
+       </CurrentUserContextProvider>
    );
 }

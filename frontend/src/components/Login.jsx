@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useCurrentUserContext } from "../contexts/userContext"
 
 function Login() {
+  const navigate = useNavigate(); // Utilisez le hook ici
+  const { setUser, setToken } = useCurrentUserContext(); // Utilisez le contexte ici
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -23,7 +26,9 @@ function Login() {
       if (!response.ok) {
         throw new Error(data.message);
       }
-      console.log(data);
+      setUser(data.user); // Met à jour l'utilisateur dans le contexte
+      setToken(data.token); // Met à jour le token dans le contexte
+      navigate('/'); 
     } catch (error) {
       setError(error.message);
     }
