@@ -1,7 +1,10 @@
+import Navbar from "../components/Navbar";
+
+
 function Browse() {
     return (
  <div>
-    Browse
+    <Navbar/>
  </div>    );
   }
   

@@ -1,6 +1,7 @@
 import  { useState } from 'react';
 import { MenuIcon } from '@heroicons/react/solid';
 import SearchBar from './SearchBar';
+//import userContext from '../contexts/userContext'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

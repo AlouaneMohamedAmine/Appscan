@@ -1,7 +1,7 @@
 
 const PopularSelection = () => {
   const books = [
-    { title: 'The Regressed Son of a Duke is an Assassin', genre: 'Action, Adventure, Fantasy, Regression', rating: 95 },
+    { cover:'https://img.asuracomics.com/unsafe/fit-in/720x936/https://asuratoon.com/wp-content/uploads/2023/05/terminallyilldarkknightCover01.png',title: 'The Regressed Son of a Duke is an Assassin', genre: 'Action, Adventure, Fantasy, Regression', rating: 95 },
     // Ajoutez vos données de livre ici
   ];
 
@@ -16,6 +16,7 @@ const PopularSelection = () => {
 
       {books.map((book, index) => (
         <div key={index} className="mb-4">
+          <img src={book.cover} alt="" />
           <h3 className="font-bold">{book.title}</h3>
           <p>{book.genre}</p>
           <div className="flex items-center">

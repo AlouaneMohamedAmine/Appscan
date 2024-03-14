@@ -12,17 +12,23 @@ CREATE TABLE IF NOT EXISTS `Users` (
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
 ENGINE = InnoDB;
 
+
+
 DROP TABLE IF EXISTS `Genres`;
 CREATE TABLE IF NOT EXISTS  `Genres` (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `genre_name` VARCHAR(255) NOT NULL
 )ENGINE = InnoDB;
 
+
+
 DROP TABLE IF EXISTS `Themes`;
 CREATE TABLE IF NOT EXISTS `Themes` (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `theme_name` VARCHAR(255) NOT NULL
 )ENGINE = InnoDB;
+
+
 
 DROP TABLE IF EXISTS `Manhwa`;
 CREATE TABLE IF NOT EXISTS `Manhwa` (
@@ -37,6 +43,8 @@ CREATE TABLE IF NOT EXISTS `Manhwa` (
     )
     ENGINE = InnoDB;
 
+
+
 DROP TABLE IF EXISTS `Chapters`;
 CREATE TABLE IF NOT EXISTS `Chapters` (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
@@ -47,6 +55,8 @@ CREATE TABLE IF NOT EXISTS `Chapters` (
 )
 ENGINE = InnoDB;
 
+
+
 DROP TABLE IF EXISTS `UserLibrary`;
 CREATE TABLE IF NOT EXISTS `UserLibrary` (
 `user_id` INT NOT NULL,
@@ -55,6 +65,8 @@ FOREIGN KEY (`user_id`) REFERENCES Users(`id`),
 FOREIGN KEY (`manwha_id`) REFERENCES Manhwa(`id`),
 PRIMARY KEY (`user_id`, `manwha_id`)
 )ENGINE = InnoDB;
+
+
 
 DROP TABLE IF EXISTS `Comments`;
 CREATE TABLE IF NOT EXISTS `Comments` (
@@ -66,6 +78,7 @@ FOREIGN KEY (`user_id`) REFERENCES Users(`id`),
 FOREIGN KEY (`chapter_id`) REFERENCES Chapters(`id`)
 )ENGINE = InnoDB;
 
+
 DROP TABLE IF EXISTS `Likes`;
 CREATE TABLE IF NOT EXISTS `Likes`(
     `user_id` INT NOT NULL,
@@ -75,5 +88,3 @@ CREATE TABLE IF NOT EXISTS `Likes`(
     FOREIGN KEY (`chapter_id`) REFERENCES Chapters(`id`),
     PRIMARY KEY (`user_id`,`chapter_id`)
 )ENGINE = InnoDB;
-
- 
