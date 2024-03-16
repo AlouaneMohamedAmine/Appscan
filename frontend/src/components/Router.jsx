@@ -12,6 +12,10 @@ import Browse from "../pages/Browse";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import AdminPage from "../pages/AdminPage";
+import ChaptersGestion from "./ChaptersGestion";
+import CommentGestion from "./CommentsGestion";
+import WebtoonsGestion from "./WebtoonsGestion";
+import UsersGestion from "./UsersGestion";
 
 
 const allRoutes = [
@@ -26,6 +30,10 @@ const allRoutes = [
       { path: "/login", component: <LoginPage />},
       { path: "/register", component: <RegisterPage />},
       { path: "/admin", component: <AdminPage />},
+      { path: "/admin/chapters_gestion", component: <ChaptersGestion />},
+      { path: "/admin/comments_gestion", component: <CommentGestion />},
+      { path: "/admin/webtoons_gestion", component: <WebtoonsGestion />},
+      { path: "/admin/users_gestion", component: <UsersGestion />},
            ];
 
 function Router() {
