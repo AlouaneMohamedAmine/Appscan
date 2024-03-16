@@ -5,3 +5,22 @@
 body {
     background: rgb(17 24 39);  
 }
+
+@media (max-width: 768px) {
+    .admin-navbar-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+}
+
+/* Styles pour les écrans de grande taille */
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+}
