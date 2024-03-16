@@ -26,7 +26,7 @@ const allRoutes = [
       { path: "/login", component: <LoginPage />},
       { path: "/register", component: <RegisterPage />},
       { path: "/admin", component: <AdminPage />},
-    ];
+           ];
 
 function Router() {
   return (
