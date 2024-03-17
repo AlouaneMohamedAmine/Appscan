@@ -4,9 +4,10 @@ function WebtoonPage() {
     return (
  <div>
    <Navbar/>
-      
-     <div className="flex flex-col p-6 bg-gray-800 mt-20">
-      <div className=" flex flex-col  items-center">
+    
+     <div className="flex flex-col p-6 bg-gray-800 mt-20 lg:flex-row  max-w-screen-lg mx-auto">
+       
+      <div className=" flex flex-col  items-center lg:w-1/3">
         <img src="https://img.asuracomics.com/unsafe/fit-in/720x936/https://asuratoon.com/wp-content/uploads/2023/05/terminallyilldarkknightCover01.png" alt="Manga Cover" className=" w-1/2"/>
         <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Bookmarked
@@ -31,7 +32,7 @@ function WebtoonPage() {
         </div>
       </div>
     </div>
-    
+     
     <div className="bg-gray-800 text-white p-8  shadow-lg mt-10">
       <h1 className="text-2xl font-semibold mb-4  text-center">
         Chapters
@@ -44,22 +45,14 @@ function WebtoonPage() {
           New Chapter
         </button>
       </div>
-      <input
-        type="text"
-        placeholder="Search Chapter, Example: 25 or 178"
-        className="bg-gray-800 text-white w-full px-4 py-2 rounded"
-      />
+     
       <ul className="mt-4">
-        <li className="hover:bg-blue-700 cursor-pointer">
-          Chapter 6 - March 10, 2024
+        <li className=" ">
+          <div className="px-4 py-2 mx-4 rounded border-gray-700 border-2 hover:bg-gray-900  cursor-pointer">
+            <a href="/webtoonname/chapter" className="block w-full">Chapter 6</a>
+            </div>
         </li>
-        <li className="hover:bg-blue-700 cursor-pointer">
-          Chapter 7 - March 10, 2024
-        </li>
-        <li className="hover:bg-blue-700 cursor-pointer">
-          Chapter 8 - March 3, 2024
-        </li>
-  
+      
       </ul>
     </div>
  </div>    );
