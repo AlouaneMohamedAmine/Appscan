@@ -33,7 +33,7 @@ function WebtoonPage() {
       </div>
     </div>
      
-    <div className="bg-gray-800 text-white p-8  shadow-lg mt-10">
+    <div className="bg-gray-800 text-white p-8  shadow-lg mt-10 lg:flex-row  max-w-screen-lg mx-auto">
       <h1 className="text-2xl font-semibold mb-4  text-center">
         Chapters
       </h1>

@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
-  
-function ChapterPage() {
+import ScrollToTop from "../components/ScrollToTop";
+import Footer from "../components/Footer"
+
+ function ChapterPage() {
     return (
  <div>
    <Navbar/>
@@ -11,7 +13,7 @@ function ChapterPage() {
     <div className="w-full max-w-xs mx-auto ">
       <div className="relative  ">
         <select className="block appearance-none w-full bg-gray-800 border border-gray-200 text-gray-400 py-3 px-4 pr-8 rounded-full leading-tight focus:outline-none  focus:border-gray-500" id="grid-state">
-          <option>New York</option>
+          <option>Chapter Number</option>
           <option>New Jersey</option>
           <option>California</option>
         </select>
@@ -29,10 +31,12 @@ function ChapterPage() {
           </button>
           </div>
   </div>    
-  <div className="flex justify-center mt-10">
+  <div className="flex justify-center mt-10 mb-10">
    <img src="https://asuratoon.com/wp-content/uploads/2024/03/01-13.webp" alt="" />
   </div>
-  </div>
+   <ScrollToTop/>
+   <Footer/>
+   </div>
   
  );
   }
