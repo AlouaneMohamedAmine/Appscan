@@ -10,10 +10,16 @@ function Home() {
     return (
  <div>
     <Navbar/>
+    <div className='lg:flex lg:flex-row justify-center'>
+    <div className=''>
     <Slider/>
     <PopularToday/>
     <LatestUpdate/>
+    </div> 
+    <div className='lg:ml-5 lg:mt-20'>
     <PopularSelection/>
+    </div>
+    </div>
  
   </div>    );
   }
