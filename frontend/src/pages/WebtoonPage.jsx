@@ -31,7 +31,37 @@ function WebtoonPage() {
         </div>
       </div>
     </div>
-      
+    
+    <div className="bg-gray-800 text-white p-8  shadow-lg mt-10">
+      <h1 className="text-2xl font-semibold mb-4  text-center">
+        Chapters
+      </h1>
+      <div className="flex justify-center mb-4">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2  mx-4 rounded">
+          First Chapter
+        </button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 mx-4 rounded">
+          New Chapter
+        </button>
+      </div>
+      <input
+        type="text"
+        placeholder="Search Chapter, Example: 25 or 178"
+        className="bg-gray-800 text-white w-full px-4 py-2 rounded"
+      />
+      <ul className="mt-4">
+        <li className="hover:bg-blue-700 cursor-pointer">
+          Chapter 6 - March 10, 2024
+        </li>
+        <li className="hover:bg-blue-700 cursor-pointer">
+          Chapter 7 - March 10, 2024
+        </li>
+        <li className="hover:bg-blue-700 cursor-pointer">
+          Chapter 8 - March 3, 2024
+        </li>
+  
+      </ul>
+    </div>
  </div>    );
   }
   
