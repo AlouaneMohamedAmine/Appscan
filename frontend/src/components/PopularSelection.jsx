@@ -6,7 +6,7 @@ const PopularSelection = () => {
   ];
 
   return (
-    <div className="bg-gray-800 text-white p-4 mt-7 w-full sm:w-64 ">
+    <div className="bg-gray-800 text-white p-4 mt-7 w-full sm:w-80 ">
       <h2 className="text-xl font-bold mb-2">Popular</h2>
       <div className="flex justify-center items-center space-x-4 mb-2 bg-gray-600 p-2">
     <button className="focus:bg-blue-500 text-sm text-white font-bold w-20">Weekly</button>
@@ -16,19 +16,24 @@ const PopularSelection = () => {
 
 
       {books.map((book, index) => (
-        <div key={index} className="mb-4 mt-10 flex">
-          <img src={book.cover} alt=""  className="w-1/6"/>
+        
+        <div key={index} className="mb-4 mt-10 flex flex-col">
+          <div className="flex">
+          <img src={book.cover} alt=""  className="w-1/6 lg:h-1/6"/>
           <div className="ml-5">
-          <h3 className="font-bold ">{book.title}</h3>
-          <p>{book.genre}</p>
+          <h3 className="font-bold  text-sm">{book.title}</h3>
+          <p className="text-xs">{book.genre}</p>
           <div className="flex items-center">
             {/* Implémentez le système de notation par étoiles en fonction de book.rating */}
             <div className="text-yellow-400">⭐⭐⭐⭐⭐</div>
-            <p className="ml-2">{book.rating}</p>
+            <p className="ml-2 text-xs">{book.rating}</p>
+          </div>
           </div>
           </div>
         </div>
+        
       ))}
+     
     </div>
   );
 };

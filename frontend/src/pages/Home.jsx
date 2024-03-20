@@ -10,7 +10,7 @@ function Home() {
     return (
  <div>
     <Navbar/>
-    <div className='lg:flex lg:flex-row justify-center'>
+    <div className='lg:flex lg:flex-row justify-center '>
     <div className=''>
     <Slider/>
     <PopularToday/>
